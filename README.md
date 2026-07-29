@@ -76,13 +76,13 @@ ollama pull nomic-embed-text
 4. Bouw de vector database:
 
 ```bash
-python build_database.py
+python ingest.py
 ```
 
 5. Start de applicatie:
 
 ```bash
-python ask_question.py
+python rag.py
 ```
 
 ## requirements.txt
@@ -106,14 +106,15 @@ python-dotenv
 TourMind/
 │
 ├── documents/
-│   ├── tourschema.md
+│   ├── tour_schema.md
 │   ├── technische_rider.md
-│   ├── hotelinformatie.md
-│   └── catering.md
+│   ├── crew_contacts.md
+│   └── setlist.md
 │
 ├── chroma_db/
-├── build_database.py
-├── ask_question.py
+├── app.py
+├── ingest.py
+├── rag.py
 ├── requirements.txt
 └── README.md
 ```
@@ -134,9 +135,6 @@ Met dit project heb ik geleerd:
 
 * Een webinterface bouwen met Streamlit.
 * PDF-documenten toevoegen.
-* Memory toevoegen aan TourMind.
-* Ondersteuning voor meerdere gebruikers.
-* Een compleet dashboard voor muziekproducties maken.
 
 ## Opmerking
 
